@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: gsortanpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gsortanpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: gsortanpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: gsortanpipelinesjavascriptdocker 
+          image: mycontainerregistry12390.azurecr.io/gsortanpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8081
